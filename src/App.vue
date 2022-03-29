@@ -6,8 +6,10 @@
     />
      <button @click="debug(strSearchFilm)">
         APP DEBUG BUTTON
-        </button>
-    <MainFilm/>
+      </button>
+    <MainFilm
+      :str-search-film="strSearchFilm"
+    />
     
   </div>
 </template>

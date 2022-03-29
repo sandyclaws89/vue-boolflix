@@ -32,6 +32,9 @@ export default {
     
      } 
     },
+    props: {
+        strSearchFilm: String,
+    },
     created() {
     axios.get('https://api.themoviedb.org/3/search/movie?api_key=93fea60e6afb40367324d80ed28c9dd4&query=ritorno+al+futuro')
       .then(axiosResponse => {
@@ -43,6 +46,11 @@ export default {
      debug (event) {
          console.log(event)
      }
+    },
+    computed: {
+        findedFilm() {
+            return this.arrFilm.filter()
+        },
     }
 
 }
