@@ -23,7 +23,14 @@ export default {
     return{
         arrFilm: null,
      } 
- }
+    },
+    created() {
+    axios.get('https://api.themoviedb.org/3/search/movie?api_key=93fea60e6afb40367324d80ed28c9dd4&query=ritorno+al+futuro')
+      .then(axiosResponse => {
+        this.arrFilm = axiosResponse.result;
+        // this.$emit('data-arrived', this.arrDischi);
+      })
+  }
 
 }
 </script>

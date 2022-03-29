@@ -2,9 +2,15 @@
   <header class="flex header">
      <div>
          logo
-
      </div>
-     <input type="text">
+
+     <input
+     id="film-id"
+     v-model="StrFilm"
+     type="text"
+     name="film"
+
+     >
   </header>
 </template>
 
@@ -12,7 +18,16 @@
 
 export default {
  name: 'HeaderFilm',
- 
+ data() {
+     return {
+         StrFilm: '',
+     }
+ },
+ methods: {
+     debug (console) {
+         console.log(@click.console)
+     }
+ }
 }
 </script>
 
