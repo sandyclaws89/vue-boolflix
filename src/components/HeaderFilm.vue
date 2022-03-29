@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style scoped lang='scss' >
+<style lang='scss' >
     .header{
         height: 8vh;
         background-color: gray;

@@ -16,6 +16,15 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped lang="scss">
+  div{
+    width: 200px;
+    height: 250px;
+    background-color: burlywood;
+    img {
+      width: 150px;
+      height: 200px
+    }
+  }
+  
 </style>

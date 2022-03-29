@@ -1,7 +1,7 @@
 <template>
   <main class="flex">
        <CardFilm
-        v-for="film in arrFilm"
+        v-for="film in arrFilm.result"
         :key="film.original_title"
         :FilmCard="film" 
        />
@@ -9,7 +9,7 @@
 
 
 
-        <button @click="debug(StrFilm)">
+        <button @click="debug(film)">
         MAIN DEBUG BUTTON
         </button>
   </main>
@@ -29,7 +29,6 @@ export default {
     data() {
     return{
         arrFilm: null,
-    
      } 
     },
     props: {
@@ -56,7 +55,7 @@ export default {
 }
 </script>
 
-<style scoped lang='scss'>
+<style lang='scss'>
     main{
         height: 92vh;
         background-color: royalblue;
