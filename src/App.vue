@@ -11,6 +11,7 @@ import MainFilm from './components/MainFilm.vue'
 
 
 export default {
+  // 93fea60e6afb40367324d80ed28c9dd4 CHIAVE API
   name: 'App',
   components: {
     HeaderFilm,

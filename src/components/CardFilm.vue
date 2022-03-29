@@ -1,12 +1,18 @@
 <template>
   <div>
-      ciao sono la card film
+      <img 
+      :src="FilmCard.poster_path" 
+      :alt="FilmCard.original_title"
+      >
   </div>
 </template>
 
 <script>
 export default {
-    name: 'CardFilm'
+    name: 'CardFilm',
+    props:{
+      FilmCard: Object,
+    }
 }
 </script>
 

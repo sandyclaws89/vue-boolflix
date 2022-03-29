@@ -1,17 +1,28 @@
 <template>
   <main class="flex">
-       <CardFilm/>
+       <CardFilm
+        v-for="film in arrFilm"
+        :key="film.original_title"
+        :FilmCard="film" 
+       />
   </main>
 </template>
 
 <script>
-import CardFilm from './CardFilm.vue'
+// /* eslint-disable */
+import CardFilm from './CardFilm.vue';
+import axios from 'axios';
 
 
 export default {
     name: 'MainFilm',
     components: {
      CardFilm
+ },
+    data() {
+    return{
+        arrFilm: null,
+     } 
  }
 
 }
