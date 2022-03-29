@@ -5,6 +5,13 @@
         :key="film.original_title"
         :FilmCard="film" 
        />
+
+
+
+
+        <button @click="debug(StrFilm)">
+        MAIN DEBUG BUTTON
+        </button>
   </main>
 </template>
 
@@ -22,6 +29,7 @@ export default {
     data() {
     return{
         arrFilm: null,
+    
      } 
     },
     created() {
@@ -30,7 +38,12 @@ export default {
         this.arrFilm = axiosResponse.result;
         // this.$emit('data-arrived', this.arrDischi);
       })
-  }
+    },
+     methods: {
+     debug (event) {
+         console.log(event)
+     }
+    }
 
 }
 </script>

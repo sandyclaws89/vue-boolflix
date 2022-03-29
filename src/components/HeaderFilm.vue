@@ -9,8 +9,13 @@
      v-model="StrFilm"
      type="text"
      name="film"
+     @input="$emit('film-inserted', StrFilm)"
 
      >
+    <button @click="debug(StrFilm)">
+        HEADER DEBUG BUTTON
+        </button>
+    <button>Search</button>
   </header>
 </template>
 
@@ -23,11 +28,12 @@ export default {
          StrFilm: '',
      }
  },
- methods: {
-     debug (console) {
-         console.log(@click.console)
+  methods: {
+     debug (event) {
+         console.log(event)
      }
- }
+
+},
 }
 </script>
 

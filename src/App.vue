@@ -1,8 +1,14 @@
 <template>
 
   <div id="app">
-    <HeaderFilm/>
+    <HeaderFilm
+    @film-inserted="setFilmSearch"
+    />
+     <button @click="debug(strSearchFilm)">
+        APP DEBUG BUTTON
+        </button>
     <MainFilm/>
+    
   </div>
 </template>
 
@@ -17,6 +23,19 @@ export default {
   components: {
     HeaderFilm,
     MainFilm
+  },
+  data() {
+    return {
+      strSearchFilm: '',
+    }
+  },
+  methods: {
+    setFilmSearch(filmArgument) {
+      this.strSearchFilm = filmArgument;
+    },
+     debug (event) {
+         console.log(event)
+     }
   }
 }
 </script>
